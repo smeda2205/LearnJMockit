@@ -1,0 +1,55 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.learn.jmockit</groupId>
+	<artifactId>LearnJMockit</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>Learn JMockit</name>
+	<description>Sample Project to learn JMockit</description>
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.11</version>
+		</dependency>
+		<dependency>
+			<groupId>mockit</groupId>
+			<artifactId>jmockit</artifactId>
+			<version>0.999</version>
+			<scope>compile</scope>
+		</dependency>
+		<!-- <dependency> <groupId>mockit</groupId> <artifactId>jmockit-coverage</artifactId> 
+			<version>0.993</version> <scope>runtime</scope> </dependency> -->
+		<dependency>
+			<groupId>com.googlecode.jmockit</groupId>
+			<artifactId>jmockit-coverage</artifactId>
+			<version>0.999.11</version>
+		</dependency>
+
+	</dependencies>
+	<!-- http://www.atomicleopard.com/java/adding-tools-jar-to-your-maven-pom -->
+	<profiles>
+		<profile>
+			<id>windows</id>
+			<activation>
+				<os>
+					<family>windows</family>
+				</os>
+			</activation>
+			<properties>
+				<toolsjar>${java.home}/../lib/tools.jar</toolsjar>
+			</properties>
+		</profile>
+		<profile>
+			<id>osx</id>
+			<activation>
+				<os>
+					<family>mac</family>
+				</os>
+			</activation>
+			<properties>
+				<toolsjar>${java.home}/../Classes/classes.jar</toolsjar>
+			</properties>
+		</profile>
+	</profiles>
+</project>
