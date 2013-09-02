@@ -4,7 +4,7 @@ import mockit.Expectations;
 
 import org.junit.Test;
 
-public class TestPublicMethodMocking {
+public class TestPublicMethodMockingExpectations {
 	
 	@Test
 	public void testRetrieveAccountHolderName(){

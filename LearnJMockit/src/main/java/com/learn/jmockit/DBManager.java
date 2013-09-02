@@ -9,4 +9,8 @@ public class DBManager {
 
 		return accountHolderName;
 	}
+	
+	public static String getConnectionString() {
+		return "ORIGINAL";
+	}
 }

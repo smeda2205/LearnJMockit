@@ -17,4 +17,15 @@ public class Bank {
 		return dbManager.retrieveAccountHolderName(accountId);
 	}
 
+	public String makeConnection() {
+		//Some Connection related code goes here
+		
+		String connStr = DBManager.getConnectionString();
+		
+		if(connStr.equals("ORIGINAL")){
+			return "SUCCESS";
+		} else {
+			return "FAIL";
+		}
+	}
 }
